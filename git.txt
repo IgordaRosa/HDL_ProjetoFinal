@@ -5,3 +5,6 @@ como adicionar no repositorio:
 
 como puxar:
 1.git pull
+
+como criar uma nova BRANCH - NOVAS ATUALIZAÇÕES
+1.git checkout -b nomedabranch
