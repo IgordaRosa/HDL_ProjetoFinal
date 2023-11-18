@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjFinal
-Wed Nov 15 19:51:24 2023
+Sat Nov 18 14:38:24 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,11 +14,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |vendingmachine
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 15 19:51:24 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 18 14:38:24 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ProjFinal                                  ;
 ; Top-level Entity Name              ; vendingmachine                             ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 53                                         ;
-;     Total combinational functions  ; 49                                         ;
-;     Dedicated logic registers      ; 30                                         ;
-; Total registers                    ; 30                                         ;
-; Total pins                         ; 17                                         ;
+; Total logic elements               ; 39                                         ;
+;     Total combinational functions  ; 32                                         ;
+;     Dedicated logic registers      ; 18                                         ;
+; Total registers                    ; 18                                         ;
+; Total pins                         ; 12                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -154,48 +151,48 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; ../src/vendingmachine.v          ; yes             ; User Verilog HDL File  ; C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; ../src/vendingmachine.v          ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 53        ;
-;                                             ;           ;
-; Total combinational functions               ; 49        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 26        ;
-;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 17        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 42        ;
-;     -- arithmetic mode                      ; 7         ;
-;                                             ;           ;
-; Total registers                             ; 30        ;
-;     -- Dedicated logic registers            ; 30        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 17        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 30        ;
-; Total fan-out                               ; 277       ;
-; Average fan-out                             ; 2.45      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 39          ;
+;                                             ;             ;
+; Total combinational functions               ; 32          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 19          ;
+;     -- 3 input functions                    ; 5           ;
+;     -- <=2 input functions                  ; 8           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 32          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 18          ;
+;     -- Dedicated logic registers            ; 18          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 12          ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 18          ;
+; Total fan-out                               ; 181         ;
+; Average fan-out                             ; 2.45        ;
++---------------------------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +200,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |vendingmachine            ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |vendingmachine     ; work         ;
+; |vendingmachine            ; 32 (32)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |vendingmachine     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,54 +210,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 18    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; estado_sensor2[1]                       ; 1       ;
-; estado_sensor1[1]                       ; 1       ;
-; tecla_anterior[0]                       ; 1       ;
-; tecla_anterior[1]                       ; 1       ;
-; tecla_atual[1]                          ; 5       ;
-; tecla_atual[0]                          ; 5       ;
-; tecla_anterior[2]                       ; 1       ;
-; tecla_anterior[3]                       ; 1       ;
-; tecla_atual[3]                          ; 5       ;
-; tecla_atual[2]                          ; 5       ;
-; Total number of inverted registers = 10 ;         ;
-+-----------------------------------------+---------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |vendingmachine|debounce_count[7]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vendingmachine|contador_sensor2[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vendingmachine|contador_sensor1[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |vendingmachine ;
-+----------------+----------+----------------------------------------------------+
-; Parameter Name ; Value    ; Type                                               ;
-+----------------+----------+----------------------------------------------------+
-; MAX_COUNT      ; 00001010 ; Unsigned Binary                                    ;
-+----------------+----------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -278,32 +235,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 15 19:51:22 2023
+    Info: Processing started: Sat Nov 18 14:38:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjFinal -c ProjFinal
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /users/konath/desktop/hdl/final/hdl_projetofinal/src/vendingmachine.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/vendingmachine.v
     Info (12023): Found entity 1: vendingmachine
 Info (12127): Elaborating entity "vendingmachine" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at vendingmachine.v(40): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at vendingmachine.v(55): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at vendingmachine.v(63): truncated value with size 32 to match size of target (8)
-Warning (10240): Verilog HDL Always Construct warning at vendingmachine.v(21): inferring latch(es) for variable "estado_sensor1", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at vendingmachine.v(21): inferring latch(es) for variable "estado_sensor2", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "estado_sensor2[0]" at vendingmachine.v(21)
-Info (10041): Inferred latch for "estado_sensor1[0]" at vendingmachine.v(21)
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(16): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(19): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(31): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(34): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(37): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(44): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(47): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vendingmachine.v(78): truncated value with size 4 to match size of target (1)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4621 megabytes
-    Info: Processing ended: Wed Nov 15 19:51:24 2023
-    Info: Elapsed time: 00:00:02
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 39 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4620 megabytes
+    Info: Processing ended: Sat Nov 18 14:38:24 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
