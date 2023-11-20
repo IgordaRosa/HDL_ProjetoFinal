@@ -1,4 +1,5 @@
 |vendingmachine
+reset => acionamentoSensores.ACLR
 reset => esperar.ACLR
 reset => BackupTecla[0].ACLR
 reset => BackupTecla[1].ACLR
@@ -21,6 +22,7 @@ clock => contadorSensores[0].CLK
 clock => contadorSensores[1].CLK
 clock => contadorSensores[2].CLK
 clock => contadorSensores[3].CLK
+clock => acionamentoSensores.CLK
 clock => esperar.CLK
 clock => BackupTecla[0].CLK
 clock => BackupTecla[1].CLK

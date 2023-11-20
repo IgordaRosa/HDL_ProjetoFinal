@@ -1,4 +1,5 @@
 module vendingmachine(reset, clock, coluna, linha, sensor1, sensor2,rele);
+
 input wire [2:0] coluna;
 input wire [3:0] linha;
 input wire sensor1, sensor2;
@@ -10,6 +11,7 @@ reg [3:0] contadorSensores;
 reg NumGiro;
 reg [6:0] BackupTecla;
 reg esperar;
+reg acionamentoSensores;
 
 always @(posedge clock or posedge reset)begin
  if(reset)begin
@@ -18,6 +20,7 @@ always @(posedge clock or posedge reset)begin
   girar = 1'b0;
   BackupTecla = 8'b0;
   esperar = 1'b0;
+  acionamentoSensores = 1'b0;
  end
  else begin
   if(esperar == 1'b0)begin
@@ -70,12 +73,16 @@ always @(posedge clock or posedge reset)begin
  end
  else begin
   contadorSensores = 4'b0000;
+  acionamentoSensores = 1'b0;
  end
  
  if(contadorSensores == 4'b1111)begin
    contadorSensores = 4'b0000;
    if(NumGiro != 4'b0000)begin
-	 NumGiro = NumGiro - 4'b0001;
+	 if(acionamentoSensores == 1'b0)begin 
+	  NumGiro = NumGiro - 4'b0001;
+	  acionamentoSensores = 1'b1;
+	 end
    end
    else begin
 	 esperar = 1'b0;
