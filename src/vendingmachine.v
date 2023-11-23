@@ -1,5 +1,6 @@
 module vendingmachine(reset_in, clock_in, coluna_in, linha_in, sensor1_in, sensor2_in, rele_out, lcd_out, enlcd_out, rslcd_out, rwlcd_out);
 
+// variaveis de 
 input wire [2:0] coluna_in;
 input wire [3:0] linha_in;
 input wire sensor1_in, sensor2_in;
@@ -21,17 +22,17 @@ output enlcd_out;
 output rslcd_out;
 output rwlcd_out;
 
-always @(rele_out or NumGiro or coluna_in or sensor1_in)begin
- $display ("===============");
- $display ("S1 %b", sensor1_in);
- $display ("S2 %b", sensor2_in);
- $display ("NumGiro %b", NumGiro);
- $display ("Coluna %b", coluna_in);
- $display ("Linha %b", linha_in);
- $display ("Girar %b", girar);
- $display ("Rele %b", rele_out);
- $display ("===============");
-end
+//always @(rele_out or NumGiro or coluna_in or sensor1_in)begin
+// $display ("===============");
+// $display ("S1 %b", sensor1_in);
+// $display ("S2 %b", sensor2_in);
+// $display ("NumGiro %b", NumGiro);
+// $display ("Coluna %b", coluna_in);
+// $display ("Linha %b", linha_in);
+// $display ("Girar %b", girar);
+// $display ("Rele %b", rele_out);
+// $display ("===============");
+//end
 
 always @(posedge clock_in or posedge reset_in)begin
  if(reset_in)begin
