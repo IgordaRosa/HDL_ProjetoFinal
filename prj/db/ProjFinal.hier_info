@@ -83,8 +83,8 @@ lcd_out[4] <= <GND>
 lcd_out[5] <= <GND>
 lcd_out[6] <= <GND>
 lcd_out[7] <= <GND>
-enlcd_out <= <GND>
-rslcd_out <= <GND>
+enlcd_out <= <VCC>
+rslcd_out <= <VCC>
 rwlcd_out <= <GND>
 
 
