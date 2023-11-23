@@ -1,0 +1,8 @@
+C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine_tb.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module vendingmachine_tb
+
+Top level modules:
+	vendingmachine_tb
+
+} {} {}}

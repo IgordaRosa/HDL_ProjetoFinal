@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Apps\quartus
+vvendingmachine
+Z1 !s100 _Y5l=8LQQI6E`;_>z6HdO3
+Z2 I5[5de:]<WZZ6h6:LR5j`P1
+Z3 VaSLkAAZ>2<FRc3D7]d]d:1
+Z4 dC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\sim
+Z5 w1700707381
+Z6 8C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v
+Z7 FC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1700707402.245000
+Z12 !s107 C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v|
+!s101 -O0
+vvendingmachine_tb
+!i10b 1
+Z13 !s100 ilck8Rg6H::eVYbM<eQGM3
+Z14 IG5Lc8=cjE7eQ:kH71kA861
+Z15 V[E2R>BLbeV7o<W;z>3J6C0
+R4
+Z16 w1700707211
+Z17 8C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v
+Z18 FC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1700707402.299000
+!s107 C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v|
+Z19 !s90 -reportprogress|300|-work|work|C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v|
+!s101 -O0
+R10
