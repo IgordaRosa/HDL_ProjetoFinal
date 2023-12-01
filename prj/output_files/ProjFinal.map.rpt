@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjFinal
-Wed Nov 22 23:52:48 2023
+Fri Dec 01 00:23:18 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,8 +13,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
+  8. General Register Statistics
+  9. Inverted Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 22 23:52:48 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 01 00:23:18 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ProjFinal                                  ;
 ; Top-level Entity Name              ; vendingmachine                             ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 66                                         ;
-;     Total combinational functions  ; 59                                         ;
-;     Dedicated logic registers      ; 21                                         ;
-; Total registers                    ; 21                                         ;
-; Total pins                         ; 23                                         ;
+; Total logic elements               ; 55                                         ;
+;     Total combinational functions  ; 49                                         ;
+;     Dedicated logic registers      ; 24                                         ;
+; Total registers                    ; 24                                         ;
+; Total pins                         ; 22                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -163,6 +163,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; ../src/teclado.v                 ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/teclado.v        ;         ;
+; ../src/rele.v                    ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v           ;         ;
+; ../src/lcd.v                     ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v            ;         ;
 ; ../src/vendingmachine.v          ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 
@@ -172,49 +175,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 66             ;
+; Estimated Total logic elements              ; 55             ;
 ;                                             ;                ;
-; Total combinational functions               ; 59             ;
+; Total combinational functions               ; 49             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 40             ;
-;     -- 3 input functions                    ; 11             ;
-;     -- <=2 input functions                  ; 8              ;
+;     -- 4 input functions                    ; 31             ;
+;     -- 3 input functions                    ; 13             ;
+;     -- <=2 input functions                  ; 5              ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 56             ;
+;     -- normal mode                          ; 46             ;
 ;     -- arithmetic mode                      ; 3              ;
 ;                                             ;                ;
-; Total registers                             ; 21             ;
-;     -- Dedicated logic registers            ; 21             ;
+; Total registers                             ; 24             ;
+;     -- Dedicated logic registers            ; 24             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 23             ;
+; I/O pins                                    ; 22             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; clock_in~input ;
-; Maximum fan-out                             ; 21             ;
-; Total fan-out                               ; 302            ;
+; Maximum fan-out                             ; 24             ;
+; Total fan-out                               ; 281            ;
 ; Average fan-out                             ; 2.40           ;
 +---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |vendingmachine            ; 59 (59)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |vendingmachine     ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; |vendingmachine            ; 49 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |vendingmachine            ; work         ;
+;    |rele:R0|               ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|rele:R0    ; work         ;
+;    |teclado:T0|            ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|teclado:T0 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+---------------------------------------+---------------------+
-; Register name                         ; Reason for Removal  ;
-+---------------------------------------+---------------------+
-; girar                                 ; Merged with esperar ;
-; Total Number of Removed Registers = 1 ;                     ;
-+---------------------------------------+---------------------+
 
 
 +------------------------------------------------------+
@@ -222,25 +217,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Clear ; 24    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vendingmachine|NumGiro[3] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vendingmachine|NumGiro    ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |vendingmachine|NumGiro    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rele:R0|espera_sensores                ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vendingmachine|rele:R0|contador_giro[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
 +-------------------------------+
@@ -258,22 +261,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 22 23:52:47 2023
+    Info: Processing started: Fri Dec 01 00:23:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjFinal -c ProjFinal
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/teclado.v
+    Info (12023): Found entity 1: teclado
+Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/rele.v
+    Info (12023): Found entity 1: rele
+Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/lcd.v
+    Info (12023): Found entity 1: lcd
 Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/vendingmachine.v
     Info (12023): Found entity 1: vendingmachine
 Info (12127): Elaborating entity "vendingmachine" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at vendingmachine.v(29): truncated value with size 8 to match size of target (7)
-Warning (10034): Output port "lcd_out" at vendingmachine.v(19) has no driver
-Warning (10034): Output port "enlcd_out" at vendingmachine.v(20) has no driver
-Warning (10034): Output port "rslcd_out" at vendingmachine.v(21) has no driver
-Warning (10034): Output port "rwlcd_out" at vendingmachine.v(22) has no driver
+Info (12128): Elaborating entity "teclado" for hierarchy "teclado:T0"
+Warning (10230): Verilog HDL assignment warning at teclado.v(19): truncated value with size 8 to match size of target (6)
+Info (10264): Verilog HDL Case Statement information at teclado.v(27): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at teclado.v(33): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "rele" for hierarchy "rele:R0"
+Info (12128): Elaborating entity "lcd" for hierarchy "lcd:L0"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "lcd_out[0]" is stuck at GND
-    Warning (13410): Pin "lcd_out[1]" is stuck at GND
-    Warning (13410): Pin "lcd_out[2]" is stuck at GND
-    Warning (13410): Pin "lcd_out[3]" is stuck at GND
     Warning (13410): Pin "lcd_out[4]" is stuck at GND
     Warning (13410): Pin "lcd_out[5]" is stuck at GND
     Warning (13410): Pin "lcd_out[6]" is stuck at GND
@@ -284,13 +292,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 66 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info (21061): Implemented 55 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4620 megabytes
-    Info: Processing ended: Wed Nov 22 23:52:48 2023
+    Info: Processing ended: Fri Dec 01 00:23:18 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

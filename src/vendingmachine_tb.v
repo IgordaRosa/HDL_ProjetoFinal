@@ -2,8 +2,7 @@
 
 module vendingmachine_tb;
 
-reg [2:0] coluna_in_r;
-reg [3:0] linha_in_r;
+reg [2:0] coluna_in_r, linha_in_r;
 reg sensor1_in_r, sensor2_in_r;
 reg clock_in_r, reset_in_r;
 wire rele_out_w;
@@ -31,12 +30,25 @@ vendingmachine U0
   .rwlcd_out(rwlcd_out_w)
 );
 
+
+always @(rele_out_w or coluna_in_r or sensor1_in_r or lcd_out_w) begin
+ $display ("===============");
+ $display ("S1 %b", sensor1_in_r);
+ $display ("S2 %b", sensor2_in_r);
+ $display ("Número %b", lcd_out_w);
+ $display ("Coluna %b", coluna_in_r);
+ $display ("Linha %b", linha_in_r);
+ $display ("Rele %b", rele_out_w);
+ $display ("===============");
+end
+
+
 	
 initial begin
 
 contador = 0;
 coluna_in_r = 3'b000;
-linha_in_r = 4'b0000;
+linha_in_r = 3'b000;
 clock_in_r = 1'b0;
 sensor1_in_r = 1'b1;
 sensor2_in_r = 1'b1;
@@ -61,26 +73,26 @@ end
 
 if(contador == 1100)begin
  coluna_in_r = 3'b010;
- linha_in_r = 4'b1000;
+ linha_in_r = 3'b100;
 end
 
 if(contador == 2100)begin
  coluna_in_r = 3'b000;
- linha_in_r = 4'b0000;
+ linha_in_r = 3'b000;
  sensor1_in_r = 1'b0;
  sensor2_in_r = 1'b0;
 end
 
 if(contador == 5100)begin
  coluna_in_r = 3'b001;
- linha_in_r = 4'b0010;
+ linha_in_r = 3'b001;
  sensor1_in_r = 1'b1;
  sensor2_in_r = 1'b1;
 end
 
 if(contador == 6100)begin
  coluna_in_r = 3'b000;
- linha_in_r = 4'b0000;
+ linha_in_r = 3'b000;
  sensor1_in_r = 1'b0;
  sensor2_in_r = 1'b0;
 end
@@ -92,7 +104,6 @@ end
 
 end
 end
-
 
 
 
