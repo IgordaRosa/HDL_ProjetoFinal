@@ -1,36 +1,36 @@
-C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine_tb.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v}
+C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v {1 {vlog -work work C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module vendingmachine_tb
+-- Compiling module display7seg
 
 Top level modules:
-	vendingmachine_tb
+	display7seg
 
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v {1 {vlog -work work C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module lcd
-
-Top level modules:
-	lcd
-
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v}
+} {} {}} C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v {1 {vlog -work work C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module vendingmachine
 
 Top level modules:
 	vendingmachine
 
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v {1 {vlog -work work C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v
+} {} {}} C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v {1 {vlog -work work C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module teclado
+
+Top level modules:
+	teclado
+
+} {} {}} C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v {1 {vlog -work work C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module rele
 
 Top level modules:
 	rele
 
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/teclado.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v}
+} {} {}} C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v {1 {vlog -work work C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module teclado
+-- Compiling module vendingmachine_tb
 
 Top level modules:
-	teclado
+	vendingmachine_tb
 
 } {} {}}

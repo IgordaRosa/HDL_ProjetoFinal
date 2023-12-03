@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjFinal
-Fri Dec 01 00:23:18 2023
+Sun Dec 03 11:14:08 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 01 00:23:18 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 03 11:14:06 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ProjFinal                                  ;
 ; Top-level Entity Name              ; vendingmachine                             ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 55                                         ;
-;     Total combinational functions  ; 49                                         ;
-;     Dedicated logic registers      ; 24                                         ;
-; Total registers                    ; 24                                         ;
-; Total pins                         ; 22                                         ;
+; Total logic elements               ; 62                                         ;
+;     Total combinational functions  ; 56                                         ;
+;     Dedicated logic registers      ; 31                                         ;
+; Total registers                    ; 31                                         ;
+; Total pins                         ; 18                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -153,21 +153,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 6      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; ../src/teclado.v                 ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/teclado.v        ;         ;
-; ../src/rele.v                    ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v           ;         ;
-; ../src/lcd.v                     ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v            ;         ;
-; ../src/vendingmachine.v          ; yes             ; User Verilog HDL File  ; C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; ../src/display7seg.v             ; yes             ; User Verilog HDL File  ; C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v    ;         ;
+; ../src/teclado.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v        ;         ;
+; ../src/rele.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v           ;         ;
+; ../src/vendingmachine.v          ; yes             ; User Verilog HDL File  ; C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -175,40 +175,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 55             ;
+; Estimated Total logic elements              ; 62             ;
 ;                                             ;                ;
-; Total combinational functions               ; 49             ;
+; Total combinational functions               ; 56             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 31             ;
+;     -- 4 input functions                    ; 39             ;
 ;     -- 3 input functions                    ; 13             ;
-;     -- <=2 input functions                  ; 5              ;
+;     -- <=2 input functions                  ; 4              ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 46             ;
+;     -- normal mode                          ; 53             ;
 ;     -- arithmetic mode                      ; 3              ;
 ;                                             ;                ;
-; Total registers                             ; 24             ;
-;     -- Dedicated logic registers            ; 24             ;
+; Total registers                             ; 31             ;
+;     -- Dedicated logic registers            ; 31             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 22             ;
+; I/O pins                                    ; 18             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; clock_in~input ;
-; Maximum fan-out                             ; 24             ;
-; Total fan-out                               ; 281            ;
-; Average fan-out                             ; 2.40           ;
+; Maximum fan-out                             ; 31             ;
+; Total fan-out                               ; 331            ;
+; Average fan-out                             ; 2.69           ;
 +---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |vendingmachine            ; 49 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |vendingmachine            ; work         ;
-;    |rele:R0|               ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|rele:R0    ; work         ;
-;    |teclado:T0|            ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|teclado:T0 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; |vendingmachine            ; 56 (0)            ; 31 (0)       ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |vendingmachine                ; work         ;
+;    |display7seg:D0|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|display7seg:D0 ; work         ;
+;    |rele:R0|               ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|rele:R0        ; work         ;
+;    |teclado:T0|            ; 21 (21)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vendingmachine|teclado:T0     ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,10 +218,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
+; Total registers                              ; 31    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
@@ -232,7 +233,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; rele:R0|espera_sensores                ; 3       ;
+; rele:R0|espera_sensores                ; 2       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -261,16 +262,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Dec 01 00:23:17 2023
+    Info: Processing started: Sun Dec 03 11:14:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjFinal -c ProjFinal
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/teclado.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/konath/desktop/hdl/final/hdl_projetofinal/src/display7seg.v
+    Info (12023): Found entity 1: display7seg
+Info (12021): Found 1 design units, including 1 entities, in source file /users/konath/desktop/hdl/final/hdl_projetofinal/src/teclado.v
     Info (12023): Found entity 1: teclado
-Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/rele.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/konath/desktop/hdl/final/hdl_projetofinal/src/rele.v
     Info (12023): Found entity 1: rele
-Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/lcd.v
-    Info (12023): Found entity 1: lcd
-Info (12021): Found 1 design units, including 1 entities, in source file /users/igord/desktop/hdl_projf/hdl_projetofinal/src/vendingmachine.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/konath/desktop/hdl/final/hdl_projetofinal/src/vendingmachine.v
     Info (12023): Found entity 1: vendingmachine
 Info (12127): Elaborating entity "vendingmachine" for the top level hierarchy
 Info (12128): Elaborating entity "teclado" for hierarchy "teclado:T0"
@@ -278,28 +279,48 @@ Warning (10230): Verilog HDL assignment warning at teclado.v(19): truncated valu
 Info (10264): Verilog HDL Case Statement information at teclado.v(27): all case item expressions in this case statement are onehot
 Info (10264): Verilog HDL Case Statement information at teclado.v(33): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "rele" for hierarchy "rele:R0"
-Info (12128): Elaborating entity "lcd" for hierarchy "lcd:L0"
+Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:D0"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "lcd_out[4]" is stuck at GND
-    Warning (13410): Pin "lcd_out[5]" is stuck at GND
-    Warning (13410): Pin "lcd_out[6]" is stuck at GND
-    Warning (13410): Pin "lcd_out[7]" is stuck at GND
-    Warning (13410): Pin "enlcd_out" is stuck at GND
-    Warning (13410): Pin "rslcd_out" is stuck at GND
-    Warning (13410): Pin "rwlcd_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored assignments for entity "DE0_D5M" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity DE0_D5M -section_id "Root Region" was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity DE0_D5M -section_id "Root Region" was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name LL_ROUTING_REGION OFF -entity DE0_D5M -section_id "Root Region" was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_D5M -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_D5M -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 55 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4620 megabytes
-    Info: Processing ended: Fri Dec 01 00:23:18 2023
-    Info: Elapsed time: 00:00:01
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 62 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4621 megabytes
+    Info: Processing ended: Sun Dec 03 11:14:09 2023
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:01
 
 

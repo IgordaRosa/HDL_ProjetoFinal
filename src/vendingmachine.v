@@ -6,11 +6,8 @@ module vendingmachine
  linha_in, 
  sensor1_in, 
  sensor2_in, 
- rele_out, 
- lcd_out, 
- enlcd_out, 
- rslcd_out, 
- rwlcd_out
+ rele_out,
+ seg_out
  );
 
 // input
@@ -20,13 +17,11 @@ input clock_in, reset_in;
 
 // output
 output wire rele_out;
-output [7:0] lcd_out;
-output enlcd_out;
-output rslcd_out;
-output rwlcd_out;
+output [6:0] seg_out;
 
 // wire
 wire [3:0] numgiro_w, contador_giro_w;
+//wire [6:0] seg_out_w;
 
 teclado T0
 (
@@ -48,15 +43,12 @@ rele R0
  .rele_out(rele_out)
 );
 
-lcd L0
+display7seg D0
 (
  .clock_in(clock_in),
  .reset_in(reset_in),
  .numgiro_in(contador_giro_w),
- .lcd_out(lcd_out),
- .enlcd_out(enlcd_out),
- .rslcd_out(rslcd_out),
- .rwlcd_out(rwlcd_out)
+ .seg_out(seg_out)
 );
 
 endmodule

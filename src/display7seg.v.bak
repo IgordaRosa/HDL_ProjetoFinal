@@ -1,0 +1,82 @@
+module lcd(reset_in, clock_in, numgiro_in, lcd_out, enlcd_out, rslcd_out, rwlcd_out);
+
+// input
+input reset_in, clock_in;
+input wire [3:0] numgiro_in;
+
+// output
+output wire [7:0] lcd_out;
+output wire enlcd_out, rslcd_out, rwlcd_out;
+
+// Definir parâmetros do display
+localparam NUM_ROWS = 2;
+localparam NUM_COLS = 16;
+
+// reg
+reg [3:0] state;
+reg [5:0] row;
+reg [5:0] col;
+reg [7:0] display_ram[NUM_ROWS * NUM_COLS - 1:0];
+reg [7:0] NumGiroConv, backup_numgiro;
+
+reg aux_rw;
+reg aux_rs;
+
+// logica do lcd
+assign enlcd_out = 1'b1;
+
+always @(posedge clock_in or posedge reset_in)begin
+	if(reset_in)begin
+		row = 6'b000000;
+		col = 6'b000000;
+		NumGiroConv = 8'b00000000;
+		aux_rw = 0;
+		aux_rs = 0;
+	end
+	else begin
+		aux_rw = ~aux_rw;
+		if(aux_rw == 1)begin
+			aux_rs = 0;
+		end
+		else if(aux_rw == 0)begin
+			aux_rs = 1;
+		end
+
+		case (numgiro_in)
+		 4'b0000: NumGiroConv = 8'b00110000; // '0' em ASCII
+		 4'b0001: NumGiroConv = 8'b00110001; // '1' em ASCII
+		 4'b0010: NumGiroConv = 8'b00110010; // '2' em ASCII
+		 4'b0011: NumGiroConv = 8'b00110011; // '3' em ASCII
+		 4'b0100: NumGiroConv = 8'b00110100; // '4' em ASCII
+		 4'b0101: NumGiroConv = 8'b00110101; // '5' em ASCII
+		 4'b0110: NumGiroConv = 8'b00110110; // '6' em ASCII
+		 4'b0111: NumGiroConv = 8'b00110111; // '7' em ASCII
+		 4'b1000: NumGiroConv = 8'b00111000; // '8' em ASCII
+		 4'b1001: NumGiroConv = 8'b00111001; // '9' em ASCII
+		 default: NumGiroConv = 8'b00110000; // Se não for um dígito, mostre '0'
+		endcase
+		
+		if (reset_in) begin
+			row <= 6'b0;
+			col <= 6'b0;
+		end
+		else if (enlcd_out) begin
+			display_ram[row * NUM_COLS + col] <= NumGiroConv;
+			col <= col + 1;
+			if (col == NUM_COLS) begin
+				col <= 6'b0;
+				row <= row + 1;
+				if (row == NUM_ROWS) begin
+					row <= 6'b0;
+				end
+			end
+			backup_numgiro = display_ram[row * NUM_COLS + col];
+		end
+  end
+end
+
+assign lcd_out = backup_numgiro;
+assign rslcd_out = aux_rs;  // Modo de dados
+assign rwlcd_out = aux_rw;  // Leitura/gravação
+
+endmodule

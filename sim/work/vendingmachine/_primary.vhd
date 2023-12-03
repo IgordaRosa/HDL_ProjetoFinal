@@ -9,9 +9,6 @@ entity vendingmachine is
         sensor1_in      : in     vl_logic;
         sensor2_in      : in     vl_logic;
         rele_out        : out    vl_logic;
-        lcd_out         : out    vl_logic_vector(7 downto 0);
-        enlcd_out       : out    vl_logic;
-        rslcd_out       : out    vl_logic;
-        rwlcd_out       : out    vl_logic
+        seg_out         : out    vl_logic_vector(6 downto 0)
     );
 end vendingmachine;

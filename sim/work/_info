@@ -3,98 +3,117 @@ K3
 13
 cModel Technology
 Z0 dD:\Apps\quartus
-vlcd
-Z1 !s100 n45NSRoMc[X`:Z=U@=@7S0
-Z2 Ig>PnlT9;N>A4X8h2o489L1
-Z3 VdXG00]79T>RBj>d8Fd2@:3
-Z4 dC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\sim
-Z5 w1701400947
-Z6 8C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v
-Z7 FC:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v
+vdisplay7seg
+!i10b 1
+Z1 !s100 KmMJl7bMiOgKUKKCD8SjZ3
+Z2 IU]LGAY;mdSSRPJhHO=z`^1
+Z3 Vjan]WJW9gdg0]F9Yi[_;g2
+Z4 dC:\Users\Konath\Desktop\HDL\final\HDL_ProjetoFinal\sim
+Z5 w1701612781
+Z6 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v
+Z7 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v
 L0 1
 Z8 OV;L;10.1d;51
 r1
+!s85 0
 31
-Z9 !s90 -reportprogress|300|-work|work|C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v|
+!s108 1701613676.319000
+!s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/display7seg.v|
+!s101 -O0
 Z10 o-work work -O0
-Z11 !s108 1701401181.942000
-Z12 !s107 C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/lcd.v|
+vlcd
+Z11 !s100 i>f`DQa[dz63ZZE@bUm]h2
+Z12 IkJbz:E3GFaD9C6XhOX6mk3
+Z13 VdXG00]79T>RBj>d8Fd2@:3
+R4
+Z14 w1701480777
+Z15 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/lcd.v
+Z16 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/lcd.v
+L0 1
+R8
+r1
+31
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/lcd.v|
+R10
+Z18 !s108 1701480948.814000
+Z19 !s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/lcd.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vrele
-Z13 !s100 Ag2f`RQh@f_:UF=kB2G261
-Z14 I=iad][571WlC^0LbeIg=K1
-Z15 VHZz5?a@DUf`izbm^99Z[D2
+Z20 !s100 CUTm?O[B8NWQ5XTA8b4nT3
+Z21 IddXQl:gYbPBeLI^4ae=UH2
+Z22 VHZz5?a@DUf`izbm^99Z[D2
 R4
-Z16 w1701400737
-Z17 8C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v
-Z18 FC:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v
+Z23 w1701425854
+Z24 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v
+Z25 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v
 L0 1
 R8
 r1
 31
-Z19 !s90 -reportprogress|300|-work|work|C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v|
+Z26 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v|
 R10
+Z27 !s108 1701613673.650000
+Z28 !s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/rele.v|
 !i10b 1
 !s85 0
-Z20 !s108 1701401182.033000
-Z21 !s107 C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v|
 !s101 -O0
 vteclado
+Z29 !s100 CKlAV?dWDoSaBKE?YbK6Q2
+Z30 I71`=G4THZ:ofU]gKi6XYL3
+Z31 VV]IWeTfKU:8`l?0zUXG:A1
+R4
+R23
+Z32 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v
+Z33 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v
+L0 1
+R8
+r1
+31
+Z34 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v|
+R10
+Z35 !s108 1701613674.458000
+Z36 !s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/teclado.v|
 !i10b 1
-Z22 !s100 3;<Y8FkaFSQ6W?0Gb3nWf1
-Z23 IM:a<>_5<`Og@PXZ7JCKjn2
-Z24 VV]IWeTfKU:8`l?0zUXG:A1
-R4
-Z25 w1701397596
-Z26 8C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v
-Z27 FC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v
-L0 1
-R8
-r1
 !s85 0
-31
-!s108 1701401182.123000
-!s107 C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v|
-Z28 !s90 -reportprogress|300|-work|work|C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v|
 !s101 -O0
-R10
 vvendingmachine
-Z29 !s100 ;O<lnkbMm9TdAl@J>1d]Y3
-Z30 I0R_e<3<R05m3j4;F0;Oz83
-Z31 V1Hj25RabGFnYne6mcgNEE3
+Z37 !s100 9C>_@VI>94BcFE<OA_9Lz0
+Z38 IcmCBP=9PeCJLOCZ^oU57o0
+Z39 V_?26^4OfZEk?8XFICe:En1
 R4
-Z32 w1701400967
-Z33 8C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v
-Z34 FC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v
+Z40 w1701612839
+Z41 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v
+Z42 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v
 L0 1
 R8
 r1
 31
-Z35 !s90 -reportprogress|300|-work|work|C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v|
+Z43 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v|
 R10
-Z36 !s108 1701401181.788000
-Z37 !s107 C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v|
+Z44 !s108 1701613674.928000
+Z45 !s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vvendingmachine_tb
-Z38 I[:>1MmK7fl[]8[KLiVoQZ2
-Z39 V[E2R>BLbeV7o<W;z>3J6C0
+Z46 IB0?@gjgBkVnQ@nh@iaY[I3
+Z47 V[E2R>BLbeV7o<W;z>3J6C0
 R4
-Z40 w1701401170
-Z41 8C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v
-Z42 FC:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v
+Z48 w1701613666
+Z49 8C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v
+Z50 FC:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v
 L0 3
 R8
 r1
 31
-Z43 !s90 -reportprogress|300|-work|work|C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v|
+Z51 !s90 -reportprogress|300|-work|work|C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v|
 R10
-Z44 !s100 9BX?CjlD>Aogd<L_PcJhG1
-Z45 !s108 1701401181.839000
-Z46 !s107 C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine_tb.v|
 !i10b 1
+Z52 !s100 BaSIcm?E[;B6Hc;@z2N^^1
 !s85 0
+Z53 !s108 1701613675.916000
+Z54 !s107 C:/Users/Konath/Desktop/HDL/final/HDL_ProjetoFinal/src/vendingmachine_tb.v|
 !s101 -O0

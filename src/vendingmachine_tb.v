@@ -8,10 +8,7 @@ reg clock_in_r, reset_in_r;
 wire rele_out_w;
 
 // lcd
-wire [7:0] lcd_out_w;
-wire enlcd_out_w;
-wire rslcd_out_w;
-wire rwlcd_out_w;
+wire [6:0] seg_out_w;
 
 integer contador;
 
@@ -24,21 +21,20 @@ vendingmachine U0
   .clock_in(clock_in_r),
   .reset_in(reset_in_r),
   .rele_out(rele_out_w),
-  .lcd_out(lcd_out_w),
-  .enlcd_out(enlcd_out_w),
-  .rslcd_out(rslcd_out_w),
-  .rwlcd_out(rwlcd_out_w)
+  .seg_out(seg_out_w)
 );
 
 
-always @(rele_out_w or coluna_in_r or sensor1_in_r or lcd_out_w) begin
+always @(rele_out_w or coluna_in_r or sensor1_in_r or seg_out_w) begin
  $display ("===============");
  $display ("S1 %b", sensor1_in_r);
  $display ("S2 %b", sensor2_in_r);
- $display ("Número %b", lcd_out_w);
+
  $display ("Coluna %b", coluna_in_r);
  $display ("Linha %b", linha_in_r);
  $display ("Rele %b", rele_out_w);
+ 
+ $display ("Display %b", seg_out_w);
  $display ("===============");
 end
 

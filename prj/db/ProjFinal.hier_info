@@ -10,17 +10,13 @@ linha_in[2] => linha_in[2].IN1
 sensor1_in => sensor1_in.IN1
 sensor2_in => sensor2_in.IN1
 rele_out <= rele:R0.rele_out
-lcd_out[0] <= lcd:L0.lcd_out
-lcd_out[1] <= lcd:L0.lcd_out
-lcd_out[2] <= lcd:L0.lcd_out
-lcd_out[3] <= lcd:L0.lcd_out
-lcd_out[4] <= lcd:L0.lcd_out
-lcd_out[5] <= lcd:L0.lcd_out
-lcd_out[6] <= lcd:L0.lcd_out
-lcd_out[7] <= lcd:L0.lcd_out
-enlcd_out <= lcd:L0.enlcd_out
-rslcd_out <= lcd:L0.rslcd_out
-rwlcd_out <= lcd:L0.rwlcd_out
+seg_out[0] <= display7seg:D0.seg_out
+seg_out[1] <= display7seg:D0.seg_out
+seg_out[2] <= display7seg:D0.seg_out
+seg_out[3] <= display7seg:D0.seg_out
+seg_out[4] <= display7seg:D0.seg_out
+seg_out[5] <= display7seg:D0.seg_out
+seg_out[6] <= display7seg:D0.seg_out
 
 
 |vendingmachine|teclado:T0
@@ -125,23 +121,31 @@ sensor2_in => always0.IN1
 rele_out <= rele_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|vendingmachine|lcd:L0
-reset_in => ~NO_FANOUT~
-clock_in => ~NO_FANOUT~
-numgiro_in[0] => lcd_out[0].DATAIN
-numgiro_in[1] => lcd_out[1].DATAIN
-numgiro_in[2] => lcd_out[2].DATAIN
-numgiro_in[3] => lcd_out[3].DATAIN
-lcd_out[0] <= numgiro_in[0].DB_MAX_OUTPUT_PORT_TYPE
-lcd_out[1] <= numgiro_in[1].DB_MAX_OUTPUT_PORT_TYPE
-lcd_out[2] <= numgiro_in[2].DB_MAX_OUTPUT_PORT_TYPE
-lcd_out[3] <= numgiro_in[3].DB_MAX_OUTPUT_PORT_TYPE
-lcd_out[4] <= <GND>
-lcd_out[5] <= <GND>
-lcd_out[6] <= <GND>
-lcd_out[7] <= <GND>
-enlcd_out <= <GND>
-rslcd_out <= <GND>
-rwlcd_out <= <GND>
+|vendingmachine|display7seg:D0
+reset_in => NumGiroConv[0].ACLR
+reset_in => NumGiroConv[1].ACLR
+reset_in => NumGiroConv[2].ACLR
+reset_in => NumGiroConv[3].ACLR
+reset_in => NumGiroConv[4].ACLR
+reset_in => NumGiroConv[5].ACLR
+reset_in => NumGiroConv[6].ACLR
+clock_in => NumGiroConv[0].CLK
+clock_in => NumGiroConv[1].CLK
+clock_in => NumGiroConv[2].CLK
+clock_in => NumGiroConv[3].CLK
+clock_in => NumGiroConv[4].CLK
+clock_in => NumGiroConv[5].CLK
+clock_in => NumGiroConv[6].CLK
+numgiro_in[0] => Decoder0.IN3
+numgiro_in[1] => Decoder0.IN2
+numgiro_in[2] => Decoder0.IN1
+numgiro_in[3] => Decoder0.IN0
+seg_out[0] <= NumGiroConv[0].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= NumGiroConv[1].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= NumGiroConv[2].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= NumGiroConv[3].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= NumGiroConv[4].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= NumGiroConv[5].DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= NumGiroConv[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
