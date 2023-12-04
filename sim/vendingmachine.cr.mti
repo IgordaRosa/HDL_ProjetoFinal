@@ -12,12 +12,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	lcd
 
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v}
+} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/teclado.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module vendingmachine
+-- Compiling module teclado
 
 Top level modules:
-	vendingmachine
+	teclado
 
 } {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v {1 {vlog -work work C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/rele.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -26,11 +26,11 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	rele
 
-} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/teclado.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\teclado.v}
+} {} {}} C:/Users/igord/Desktop/HDL_projf/HDL_ProjetoFinal/src/vendingmachine.v {1 {vlog -work work {C:\Users\igord\Desktop\HDL_projf\HDL_ProjetoFinal\src\vendingmachine.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module teclado
+-- Compiling module vendingmachine
 
 Top level modules:
-	teclado
+	vendingmachine
 
 } {} {}}
